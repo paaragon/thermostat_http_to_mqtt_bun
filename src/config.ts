@@ -1,3 +1,5 @@
+export const AUTH_USER = process.env.AUTH_USER;
+export const AUTH_PASS = process.env.AUTH_PASS;
 export const MQTT_SERVER = process.env.MQTT_SERVER;
 export const MQTT_PORT = +process.env.MQTT_PORT;
 export const MQTT_KEEPALIVE = +process.env.MQTT_KEEPALIVE;

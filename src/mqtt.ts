@@ -1,6 +1,7 @@
-import { MQTT_PORT, MQTT_SERVER } from '@config'
+import { MQTT_PORT, MQTT_SERVER, MQTT_TOPIC_PREFIX } from '@config'
 import * as mqtt from "mqtt"
 import { MqttClient } from 'mqtt'
+
 
 export let client: MqttClient
 
