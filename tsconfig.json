@@ -5,6 +5,19 @@
       "target": "esnext",
       "moduleResolution": "node",
       // "bun-types" is the important part
-      "types": ["bun-types"]
+      "types": ["bun-types"],
+      "allowSyntheticDefaultImports": true,
+      "baseUrl": ".",
+      "paths": {
+        "@config": [
+          "src/config.ts"
+        ],
+        "@lib": [
+          "src/lib"
+        ],
+        "@lib/*": [
+          "src/lib/*"
+        ]
+      }
     }
   }

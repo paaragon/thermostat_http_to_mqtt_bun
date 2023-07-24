@@ -1,19 +1,31 @@
-import { Hono } from "hono";
-import { serveStatic } from "hono/serve-static.bun";
 
-const port = parseInt(process.env.PORT) || 3000;
+import { Hono } from "hono"
+import { API_PORT } from '@config'
 
-const app = new Hono();
+// API REQUEST HANDLERS
+async function getLatestSettedTemperature() {
 
-app.use("/favicon.ico", serveStatic({ path: "./public/favicon.ico" }));
+}
 
-app.get("/", (c) => {
-  return c.json({ message: "Hello World!" });
-});
+async function updateSettedTemperature() {
 
-console.log(`Running at http://localhost:${port}`);
+}
+
+async function increaseDecreaseSettedTemperature() {
+
+}
+
+// API DECLARATION
+const port = API_PORT || 3000;
+const app = new Hono()
+
+app.get("/api/v1/thermostat/temp", getLatestSettedTemperature)
+app.post("/api/v1/thermostat/temp", updateSettedTemperature)
+app.post("/api/v1/thermostat/temp/<dir>", increaseDecreaseSettedTemperature)
+
+console.log(`Running at http://localhost:${port} `)
 
 export default {
-  port,
+  port: port,
   fetch: app.fetch,
-};
+}

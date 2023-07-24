@@ -1,21 +1,3 @@
-# Hono with Bun runtime
+# thermostat_http_to_mqtt_bun
 
-## Getting Started
-
-### Cloning the repo
-
-```sh
-bun create hono ./NAME_HERE
-```
-
-### Development
-
-```
-bun run start
-```
-
-Open http://localhost:3000 with your browser to see the result.
-
-### For more information
-
-See <https://honojs.dev/>
+This API is an interface between HTTP and the MQTT broker of the thermostat.

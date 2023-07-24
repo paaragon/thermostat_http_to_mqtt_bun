@@ -1,0 +1,10 @@
+export const MQTT_SERVER = process.env.MQTT_SERVER;
+export const MQTT_PORT = +process.env.MQTT_PORT;
+export const MQTT_KEEPALIVE = +process.env.MQTT_KEEPALIVE;
+export const MQTT_TOPIC_PREFIX = process.env.MQTT_TOPIC_PREFIX;
+export const PG_HOST = process.env.PG_HOST;
+export const PG_PORT = +process.env.PG_PORT;
+export const PG_DB = process.env.PG_DB;
+export const PG_USER = process.env.PG_USER;
+export const PG_PASS = process.env.PG_PASS;
+export const API_PORT = +process.env.PORT;
