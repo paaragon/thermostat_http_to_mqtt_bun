@@ -1,18 +1,17 @@
 
+import { API_PORT } from "@config";
+import { log } from "@lib/log";
 import { Hono } from "hono"
-import { API_PORT } from '@config'
+import { initClient } from "./mqtt";
 
-// API REQUEST HANDLERS
-async function getLatestSettedTemperature() {
-
-}
-
-async function updateSettedTemperature() {
-
-}
-
-async function increaseDecreaseSettedTemperature() {
-
+// MQTT
+try {
+  log.info("Connecting to MQTT server...")
+  await initClient()
+  log.info("connected")
+} catch (e) {
+  log.error(e)
+  process.exit(1)
 }
 
 // API DECLARATION
